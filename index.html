@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="stylesheet" href="style.css">
+        <title>Timer 2</title>
+    </head>
+    <body>
+        <div class="main-label">Timer</div>
+        <div id="container-input" class="container-input container">
+            <div class="amount-input values-input">
+                <label for="amount">Amount</label>
+                <div class="amount-input-container">
+                    <input id="amount" name="amount" class="amount-input-box" type="number" placeholder="0"/>
+                    <div>grams</div>
+                </div>
+            </div>
+            <div class="acidity-input values-input">
+                <label for="acidity">Acidity</label>
+                <div class="slider-input-container">
+                    <div class="slider-label">Sweet</div>
+                    <input id="acidity" name="acidity" class="slider" type="range" min="1" max="5" list="acidityStepList"/>
+                    <datalist id="acidityStepList">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </datalist>
+                    <div class="slider-label">Acidic</div>
+                </div>
+            </div>
+            <div class="strength-input values-input">
+                <label for="strength">Strength</label>
+                <div class="slider-input-container">
+                    <div class="slider-label">Light</div>
+                    <input id="strength" name="strength" class="slider" type="range" min="1" max="5" list="strengthStepList"/>
+                    <datalist id="strengthStepList">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </datalist>
+                    <div class="slider-label">Strong</div>
+                </div>
+            </div>
+            <button id="start">Start</button>
+        </div>
+        <div id="container-timer" class="container-timer container">
+            <div id="timerDisplay" class="timer">0</div>
+            <div id="messageDisplay" class="message"></div>
+            <div id="pourAmountDisplay" class="message"></div>
+            <div id="remainingPoursDisplay" class="message"></div>
+            <div class="button-container">
+                <button id="reset">Reset</button>
+                <button id="back">Back</button>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
